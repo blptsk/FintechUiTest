@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FintechUiTest" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/t_main_color</item>
+        <item name="colorOnPrimary">@color/t_text_color</item>
+
+    </style>
+
+    <style name="Theme.FintechUiTest" parent="Base.Theme.FintechUiTest" />
+</resources>
