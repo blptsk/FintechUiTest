@@ -59,26 +59,26 @@ class SecondFragment : Fragment() {
 
             view.let { activity?.hideKeyboard(it) }
 
-            val ET_login_value = binding.edittextLogin.text
-            val ET_password_value = binding.edittextPassword.text
+            val loginValueFromET = binding.edittextLogin.text
+            val passwordValueFromET = binding.edittextPassword.text
 
-            var snackMessage : String = "You enter login = $ET_login_value password = $ET_password_value"
+            var snackMessage : String = "You enter login = $loginValueFromET password = $passwordValueFromET"
 
-            if (ET_login_value.isEmpty()) {
+            if (loginValueFromET.isEmpty()) {
                 snackMessage = "Login field must be filled!"
                 binding.edittextLogin.setHintTextColor(resources.getColor(R.color.error_hint))
             } else
                 binding.edittextLogin.setHintTextColor(resources.getColor(R.color.default_color_hint))
 
 
-            if (ET_password_value.isEmpty()){
+            if (passwordValueFromET.isEmpty()){
                 snackMessage = "Password field must be filled!"
                 binding.edittextPassword.setHintTextColor(resources.getColor(R.color.error_hint))
             } else
                 binding.edittextPassword.setHintTextColor(resources.getColor(R.color.default_color_hint))
 
 
-            if (ET_login_value.isEmpty() && ET_password_value.isEmpty())
+            if (loginValueFromET.isEmpty() && passwordValueFromET.isEmpty())
                 snackMessage = "Both of fields must be filled!"
 
             Snackbar.make(view, snackMessage, Snackbar.LENGTH_LONG)
